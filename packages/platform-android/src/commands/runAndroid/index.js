@@ -162,7 +162,7 @@ function tryInstallAppOnDevice(args, adbPath, device) {
   try {
     // "app" is usually the default value for Android apps with only 1 app
     const {appFolder} = args;
-    const variant = args.variant.toLowerCase();
+    const variant = args.variant;
     const buildDirectory = `${appFolder}/build/outputs/apk/${variant}`;
     const apkFile = getInstallApkName(
       appFolder,
